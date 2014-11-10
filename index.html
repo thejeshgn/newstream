@@ -23,39 +23,20 @@
           <li role="presentation"><a href="#">About</a></li>
           <li role="presentation"><a href="https://thejeshgn.com/contact">Contact</a></li>
         </ul>
-        <h3 class="text-muted">Chill Factor India News Stream</h3>
-      </div>
-
-      <div class="alert alert-info alert-dismissible" role="alert">
-        <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <strong>Heads up!</strong> If you dont like bad news then you shouldnt be looking at this. This is a stream of bad news.
-      </div>
-      
-      <div id="news_scroll" class="col-lg-12">
-
-      </div>
-
-      <div >
+        <h3 class="text-muted">News Stream</h3>
+      </div>      
+        <div id="news_scroll" class="col-lg-12">
+            <div class="list-group">
+              <div class='list-group-item'>
+                <a href="chill-factor.html">Chill Factor India News Stream</a> - If you dont like bad news then you shouldnt be looking at this. This is a stream of bad news from India.
+              </div>
+            </div>
+        </div>
+        <br>
+        <div >
         <p>&copy; Thejesh GN 2014</p>
       </div>
 
-    </div> <!-- /container -->
-
-<script>
-url = 'getJSONCrossDomain.php';
-$.getJSON( url, function( data ) {
-  var items = [];
-  $.each( data, function( key, val ) {
-  console.log(val);
-    domainFavIconURL ='http://www.google.com/s2/favicons?domain='+val.u;
-    items.push( "<div class='list-group-item'>  <div class='news_item_header'><img  class='news_item_favicon' src='"+domainFavIconURL+"' width=16 height=16/><a href='"+val.u+"'>" + val.d + "</a></div><p class='news_item_description'>"+val.n+"</p></div>" );
-  });
- 
-  $( "<div>", {
-    "class": "list-group",
-    html: items.join( "" )
-  }).appendTo( $( "#news_scroll" ) );
-});</script>
-    
+    </div> <!-- /container -->    
 </body>
 </html>
