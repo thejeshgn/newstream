@@ -47,7 +47,7 @@ $.getJSON( url, function( data ) {
   var items = [];
   $.each( data, function( key, val ) {
   console.log(val);
-    domainFavIconURL ='http://www.google.com/s2/favicons?domain='+val.u;
+    domainFavIconURL ='https://www.google.com/s2/favicons?domain='+val.u;
     items.push( "<div class='list-group-item'>  <div class='news_item_header'><img  class='news_item_favicon' src='"+domainFavIconURL+"' width=16 height=16/><a href='"+val.u+"'>" + val.d + "</a></div><p class='news_item_description'>"+val.n+"</p></div>" );
   });
  
