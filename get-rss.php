@@ -1,5 +1,5 @@
 <?php
-header('Content-type: application/xml');
+header('Content-type: application/rss+xml');
 $url = "https://feeds.pinboard.in/rss/u:thej/t:chillfactor2014";
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
